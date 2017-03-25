@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D7CAEE41E86902B00F15501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CAEE31E86902B00F15501 /* AppDelegate.swift */; };
-		0D7CAEE61E86902B00F15501 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CAEE51E86902B00F15501 /* ViewController.swift */; };
+		0D7CAEE61E86902B00F15501 /* ContactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CAEE51E86902B00F15501 /* ContactsListViewController.swift */; };
 		0D7CAEE91E86902B00F15501 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CAEE71E86902B00F15501 /* Main.storyboard */; };
 		0D7CAEEC1E86902B00F15501 /* ContactManagement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D7CAEEA1E86902B00F15501 /* ContactManagement.xcdatamodeld */; };
 		0D7CAEEE1E86902B00F15501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D7CAEED1E86902B00F15501 /* Assets.xcassets */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		0D7CAEE01E86902B00F15501 /* ContactManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D7CAEE31E86902B00F15501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D7CAEE51E86902B00F15501 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D7CAEE51E86902B00F15501 /* ContactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListViewController.swift; sourceTree = "<group>"; };
 		0D7CAEE81E86902B00F15501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D7CAEEB1E86902B00F15501 /* ContactManagement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactManagement.xcdatamodel; sourceTree = "<group>"; };
 		0D7CAEED1E86902B00F15501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0D7CAEE31E86902B00F15501 /* AppDelegate.swift */,
-				0D7CAEE51E86902B00F15501 /* ViewController.swift */,
+				0D7CAEE51E86902B00F15501 /* ContactsListViewController.swift */,
 				0D7CAEE71E86902B00F15501 /* Main.storyboard */,
 				0D7CAEED1E86902B00F15501 /* Assets.xcassets */,
 				0D7CAEEF1E86902B00F15501 /* LaunchScreen.storyboard */,
@@ -449,7 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D7CAEE61E86902B00F15501 /* ViewController.swift in Sources */,
+				0D7CAEE61E86902B00F15501 /* ContactsListViewController.swift in Sources */,
 				0D7CAEEC1E86902B00F15501 /* ContactManagement.xcdatamodeld in Sources */,
 				0D7CAEE41E86902B00F15501 /* AppDelegate.swift in Sources */,
 			);
@@ -702,6 +702,7 @@
 				0D7CAF0D1E86902B00F15501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D7CAF0E1E86902B00F15501 /* Build configuration list for PBXNativeTarget "ContactManagementTests" */ = {
 			isa = XCConfigurationList;
@@ -710,6 +711,7 @@
 				0D7CAF101E86902B00F15501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D7CAF111E86902B00F15501 /* Build configuration list for PBXNativeTarget "ContactManagementUITests" */ = {
 			isa = XCConfigurationList;
@@ -718,6 +720,7 @@
 				0D7CAF131E86902B00F15501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
