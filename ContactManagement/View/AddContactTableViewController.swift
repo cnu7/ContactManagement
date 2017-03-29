@@ -11,6 +11,8 @@ import UIKit
 class AddContactTableViewController: UITableViewController, ContactDelegate {
     
     var viewModel:AddContactViewModel?
+    var loadingView:LoadingView?
+
     
     @IBOutlet weak var gradientView: UIView!
     
@@ -128,7 +130,8 @@ class AddContactTableViewController: UITableViewController, ContactDelegate {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
+    
+    
 
     
 }

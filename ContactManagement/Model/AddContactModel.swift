@@ -70,7 +70,9 @@ class AddContactModel:NSObject{
         manager.post(url, parameters: parameters, progress: { (progress) in
             
         }, success: { (operation, response) in
-            ContactsAdapter.contactAdapterSharedInstance.saveContact(id: <#T##Int#>, firstName: <#T##String#>, lastName: <#T##String#>, profilePic: <#T##String#>, url: <#T##String#>, isFavourite: <#T##Bool#>)
+            let url = "https://gojek-contacts-app.herokuapp.com/contacts/\(self.maxId!+1).json"
+            let picUrl = "https://contacts-app.s3-ap-southeast-1.amazonaws.com/contacts/profile_pics/000/000/007/original/ab.jpg?1464516610"
+            ContactsAdapter.contactAdapterSharedInstance.saveContact(id: Int(self.maxId!+1), firstName: fname, lastName: lname, profilePic:picUrl , url: url, isFavourite: false)
             self.delegate?.onSuccess()
         }) { (operation, error) in
             print(error.localizedDescription)
