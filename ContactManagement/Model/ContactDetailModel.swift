@@ -44,6 +44,10 @@ class ContactDetailModel:NSObject{
     func getName() -> String?{
         return "\(self.contact!.firstName!) \(self.contact!.lastName!)"
     }
+    
+    func getContact() -> Contact {
+        return self.contact!
+    }
         
     private func getContactDetailsFromServer(){
         let manager = AFHTTPSessionManager()
@@ -82,6 +86,8 @@ class ContactDetailModel:NSObject{
     func deleteContact(){
         ContactsAdapter.contactAdapterSharedInstance.deleteContactById(id: self.contact!.contactId)
     }
+    
+    
     
     
 

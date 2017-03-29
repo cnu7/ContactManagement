@@ -16,12 +16,18 @@ class ContactDetailViewController: UITableViewController,ContactDelegate {
     
     @IBOutlet weak var mobileNumberLabel: UILabel!
     
+    @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var emailLabel: UILabel!
     
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var favouriteButton: UIButton!
     
+    @IBAction func editButtonClicked(_ sender: UIBarButtonItem) {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addContactVC") as! AddContactTableViewController
+        controller.viewModel = AddContactViewModel(delegate:controller, contact: (self.viewModel?.getContact())!, maxId:1)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     @IBAction func messageButtonClicked(_ sender: UIButton) {
         self.viewModel?.sendMessage(viewController: self)
     }
@@ -60,6 +66,13 @@ class ContactDetailViewController: UITableViewController,ContactDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureViews()
+        self.tableView.tableFooterView = UIView()
+        
+        let gradient = CAGradientLayer()
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.white.cgColor, Constants.Color.themeColor.cgColor]
+        self.gradientView.layer.insertSublayer(gradient, at: 0)
+
         // Do any additional setup after loading the view.
     }
 

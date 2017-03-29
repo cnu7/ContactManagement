@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cvp-wo-bwn" id="BlH-F2-Rm9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultUser" translatesAutoresizingMaskIntoConstraints="NO" id="hCc-AS-5zM">
@@ -94,13 +94,14 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="quR-Hq-qfT">
                             <color key="tintColor" red="0.30196078431372547" green="0.92549019607843142" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="vOe-u6-jeA" kind="show" id="F0m-Ig-VD2"/>
+                                <action selector="addNewContactButtonClicked:" destination="BYZ-38-t0r" id="djg-SP-pjE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="lG1-9c-4nD" id="DaS-JM-Uly"/>
                         <segue destination="e8U-dH-kqU" kind="show" id="bXN-B0-Xcc"/>
+                        <segue destination="vOe-u6-jeA" kind="show" id="hwj-oA-i60"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -122,7 +123,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yTP-iZ-1Rc" id="cWk-LX-rsr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="224"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIB-3L-L0V">
@@ -324,7 +325,7 @@
                                         <rect key="frame" x="0.0" y="225" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EKA-ao-4qY" id="Yiu-xM-bBv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta9-Zn-wfe">
@@ -359,7 +360,7 @@
                                         <rect key="frame" x="0.0" y="285" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Rq-tH-Ndo" id="dFe-jP-2n5">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obu-MZ-ZHx">
@@ -394,7 +395,7 @@
                                         <rect key="frame" x="0.0" y="345" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a2O-mO-Cp6" id="2e1-bT-A23">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rK2-hZ-zlq">
@@ -428,11 +429,15 @@
                     <navigationItem key="navigationItem" id="TcU-Em-cAu">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="QsW-AJ-si6">
                             <color key="tintColor" red="0.30196078430000001" green="0.92549019610000005" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="editButtonClicked:" destination="e8U-dH-kqU" id="rP2-VF-Jli"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="ofE-Dj-wRJ" id="mxe-h8-j6f"/>
                         <outlet property="favouriteButton" destination="jHe-Zz-XPF" id="act-18-WZS"/>
+                        <outlet property="gradientView" destination="bIB-3L-L0V" id="RdN-IV-7SA"/>
                         <outlet property="mobileNumberLabel" destination="eGy-yQ-ga8" id="0sg-Yo-CQn"/>
                         <outlet property="nameLabel" destination="oFo-XJ-0mD" id="LeO-kg-pQK"/>
                         <outlet property="profileImageView" destination="iFs-pc-dWV" id="fvg-sl-2bF"/>
@@ -457,7 +462,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QZF-ct-jby" id="Rh7-jY-RA7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hos-NR-wLP">
@@ -495,7 +500,7 @@
                                         <rect key="frame" x="0.0" y="150" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UiP-gV-e0e" id="RXq-R4-cDk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91G-jH-rdz">
@@ -531,7 +536,7 @@
                                         <rect key="frame" x="0.0" y="210" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="INf-2S-qOa" id="Id2-pE-lkf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rv-Bq-MW4">
@@ -567,7 +572,7 @@
                                         <rect key="frame" x="0.0" y="270" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eNK-rf-aJp" id="O1Z-1M-twV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60l-c6-86h">
@@ -603,7 +608,7 @@
                                         <rect key="frame" x="0.0" y="330" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JlR-iG-aIO" id="9wp-Ky-64R">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSb-gi-8oi">
@@ -646,15 +651,29 @@
                     <navigationItem key="navigationItem" id="Jz1-TH-5xF">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ueP-bO-dq5">
                             <color key="tintColor" red="0.30196078430000001" green="0.92549019610000005" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelButtonClicked:" destination="vOe-u6-jeA" id="Oey-VS-HeQ"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="nwm-zG-Gx4">
                             <color key="tintColor" red="0.30196078430000001" green="0.92549019610000005" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="vOe-u6-jeA" id="ntb-j4-Wk4"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="WIs-kP-FJX" id="5Er-Ue-ePb"/>
+                        <outlet property="firstNameTextField" destination="sFI-lI-DEp" id="4Ko-bU-pwa"/>
+                        <outlet property="gradientView" destination="hos-NR-wLP" id="Tsu-RK-RAl"/>
+                        <outlet property="lastNameTextField" destination="hEd-aJ-m2Q" id="A3j-nw-CRd"/>
+                        <outlet property="mobileTextField" destination="o3W-77-VUN" id="CbY-az-OLg"/>
+                        <outlet property="profileImageView" destination="Jgg-Vt-gq2" id="yqa-BN-fsZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foR-sa-aRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2668" y="-914.392803598201"/>
+            <point key="canvasLocation" x="1546" y="-732"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="S8G-rT-jun">

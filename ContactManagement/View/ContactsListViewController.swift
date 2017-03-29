@@ -12,6 +12,15 @@ class ContactsListViewController: BaseViewController, UITableViewDelegate, UITab
     
     @IBOutlet weak var tableview: UITableView!
     
+    
+    @IBAction func addNewContactButtonClicked(_ sender: UIBarButtonItem) {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addContactVC") as! AddContactTableViewController
+        var maxId = self.viewModel?.getMaxId() == nil ? 1: self.viewModel?.getMaxId()
+        controller.viewModel = AddContactViewModel(delegate:controller, contact: nil, maxId:maxId!)
+        self.navigationController?.pushViewController(controller, animated: true)
+
+    }
+    
     var viewModel:ContactsListViewModel?
 
     override func viewDidLoad() {

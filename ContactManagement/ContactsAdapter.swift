@@ -68,7 +68,19 @@ class ContactsAdapter: NSObject {
             contact.email = email
             self.insertContact()
         }else{
-//            print("contact id is not present")
+            print("contact id is not present")
+        }
+    }
+    
+    func saveContactDataById(id:Int,fname:String, lname:String, mobile:String,email:String){
+        if let contact = self.getContactForId(id: id){
+            contact.mobileNumber = mobile
+            contact.email = email
+            contact.firstName = fname
+            contact.lastName = lname
+            self.insertContact()
+        }else{
+            print("contact id is not present")
         }
     }
     

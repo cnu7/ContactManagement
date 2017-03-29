@@ -18,6 +18,8 @@ class ContactsListModel:NSObject{
     
     private var contactArray = [Contact]()
     var delegate:ContactDelegate?
+    var maxID:Int64 = 1
+    
     public init(delegate:ContactDelegate) {
         super.init()
         self.delegate = delegate;
@@ -31,6 +33,10 @@ class ContactsListModel:NSObject{
     
     func getContactAtIndex(index:Int) -> Contact{
         return self.contactArray[index]
+    }
+    
+    func getMaxId() -> Int64?{
+        return self.maxID
     }
 
     private func getContactsFromServer(){
@@ -74,6 +80,9 @@ class ContactsListModel:NSObject{
             self.contactArray = contacts.sorted { $0.firstName! < $1.firstName! }
             
         }
+//    maxID = max(self.contactArray.map{$0.contactId})
+        maxID = self.contactArray.map { $0.contactId }.max()!
+
     }
     
     func reloadTableWithLocalData(){

@@ -40,6 +40,10 @@ class ContactDetailViewModel: NSObject, MFMailComposeViewControllerDelegate, MFM
         return self.model?.getName()
     }
     
+    func getContact() -> Contact {
+        return self.model!.getContact()
+    }
+    
     func saveContactIsFavouriteToDB(isFavourite:Bool){
         self.model?.saveContactIsFavouriteToDB(isFavourite: isFavourite)
     }

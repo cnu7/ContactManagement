@@ -31,6 +31,10 @@ class ContactsListViewModel: NSObject, ContactDelegate {
         self.model?.reloadTableWithLocalData()
     }
     
+    func getMaxId() -> Int64?{
+        return self.model?.getMaxId()
+    }
+       
     // MARK: - Contact Delegates
 
     func onSuccess() {
